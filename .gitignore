@@ -1,0 +1,48 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Logs / outputs
+*.log
+saved_results/
+saved_results_*/
+output/
+outputs/
+runs/
+wandb/
+*.pth
+*.pt
+*.ckpt
+
+# Datasets (never commit)
+data/MVTec-AD/
+data/VisA/
+data/Real-IAD/
+data/*_nr*_seed_*/
+mvtec_anomaly_detection/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db

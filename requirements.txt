@@ -1,0 +1,30 @@
+# Core deep learning
+torch>=1.12
+torchvision>=0.13
+timm>=0.6.0
+
+# Numerics / scientific
+numpy
+scipy
+scikit-learn
+scikit-image
+pandas
+sympy
+
+# Image / vision
+opencv-python
+Pillow
+
+# Plotting & UI
+matplotlib
+tabulate
+colorama
+tqdm
+
+# Model utilities
+ptflops
+
+# Optional: GPU-accelerated AD metrics (P-AUROC / P-AUPRO).
+# evaluation_batch will fall back to a slower sklearn/skimage path
+# when adeval is not installed.
+adeval
