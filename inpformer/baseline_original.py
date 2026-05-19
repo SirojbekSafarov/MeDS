@@ -267,8 +267,8 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('--dataset', type=str, default=r'MVTec-AD') # 'MVTec-AD' or 'VisA'
-    parser.add_argument('--data_path', type=str, default='/research/workspaces/sirojbek/mvtec_noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0')
-    parser.add_argument('--output_dir', type=str, default=f'/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/multi_class/stage_3_pseudo_label_selection/distilled_model_as_dataselector/with_distilled_as_seed_model/noise_ratio_10/seed_0/z3/ensemble_100_p10/l2')
+    parser.add_argument('--data_path', type=str, default='/path/to/datasets/MVTec-AD-noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0')
+    parser.add_argument('--output_dir', type=str, default='/path/to/experiments/inpformer/mvtec/baseline/noise_ratio_10/seed_0')
     parser.add_argument('--encoder', type=str, default='dinov2reg_vit_base_14')
     parser.add_argument('--n_iters', type=int, default=10000)
     parser.add_argument('--batch_size', type=int, default=16)

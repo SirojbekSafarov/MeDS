@@ -334,7 +334,6 @@ def train(item_list, save_name):
                              fuse_layer_encoder=fuse_layer_encoder, fuse_layer_decoder=fuse_layer_decoder)
     # model_state_dict = torch.load('visa_noise_ratio_10/visa_memory_to_recon_distill_iter_10000_loss_lambda_10_ensemble_100_wo_gausian/mode
     # l.pth', map_location='cpu')
-    # model_state_dict = torch.load('/research/data/model_artifacts/Sirojbek/Dinomaly/all_results/real_iad_saved_results/memory_dinomaly_distill_fuad_0.1/model.pth', map_location='cpu')
     distill_output_dir = args.distill_output_dir + f'model_{item_list[0]}.pth'
     model_state_dict = torch.load(distill_output_dir, map_location='cpu')
     distilled_model.load_state_dict(model_state_dict, strict=True)
@@ -425,11 +424,9 @@ if __name__ == '__main__':
     fuiad = '0.4'
     parser = argparse.ArgumentParser(description='')
     # parser.add_argument('--data_path', type=str, default='./MVTech')
-    parser.add_argument('--data_path', type=str, default='/research/workspaces/sirojbek/Real-IAD')
-    # parser.add_argument('--save_dir', type=str, default='/research/experiments/siroj/academic/noisy_ad/dinomaly/real_iad/dino_v2_vit_base_backbone/single_class/stage_3_dataselection_z3_org_loss/')
-    parser.add_argument('--save_dir', type=str, default='/research/experiments/siroj/academic/noisy_ad/dinomaly/real_iad/dino_v2_vit_base_backbone/single_class/stage_3_dataselection/z1/')
-    parser.add_argument('--distill_output_dir', type=str, default=f'/research/experiments/siroj/academic/noisy_ad/dinomaly/real_iad/dino_v2_vit_base_backbone/single_class/stage_2_distillation/memory_dinomaly_distill_fuad_{fuiad}_iter_2500/')
-    # parser.add_argument('--distill_output_dir', type=str, default=f'/research/data/model_artifacts/Sirojbek/Dinomaly/all_results/real_iad_distillation_results_sep_class/memory_dinomaly_distill_fuad_0.1_iter_2500/model_audiojack.pth')
+    parser.add_argument('--data_path', type=str, default='/path/to/datasets/Real-IAD')
+    parser.add_argument('--save_dir', type=str, default='/path/to/experiments/dinomaly/real_iad/single_class/stage_3_data_selection/')
+    parser.add_argument('--distill_output_dir', type=str, default=f'/path/to/experiments/dinomaly/real_iad/single_class/stage_2_distillation/fuiad_{fuiad}_iter_2500/')
 
     parser.add_argument('--save_name', type=str,
                         default=f'fuiad_{fuiad}')

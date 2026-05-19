@@ -467,7 +467,6 @@ def train(item_list, output_dir, distill_output_dir, total_iters=10000, batch_si
 
     state_dict_path = os.path.join(distill_output_dir, 'model.pth')
     distilled_model_state_dict = torch.load(state_dict_path, map_location='cpu')
-    # model_state_dict = torch.load('/research/data/model_artifacts/Sirojbek/INP-Former/saved_noisy_results/mvtec_noisy/Distillation/ratio_10/seed_0/INP-Former-Multi-Class_dataset=MVTec-AD_Encoder=dinov2reg_vit_base_14_Resize=448_Crop=392_INP_num=6/model.pth', map_location='cpu')
     distilled_model.load_state_dict(distilled_model_state_dict)
     distilled_model = distilled_model.to(device)
     distilled_model.eval()
@@ -580,9 +579,9 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('--dataset', type=str, default=r'MVTec-AD') # 'MVTec-AD' or 'VisA'
-    parser.add_argument('--data_path', type=str, default='/research/workspaces/sirojbek/mvtec_noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0')
-    parser.add_argument('--output_dir', type=str, default=f'/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/multi_class/stage_3_pseudo_label_selection/distilled_model_as_dataselector/with_distilled_as_seed_model/noise_ratio_10/seed_0/z3/ensemble_100_p10/l2')
-    parser.add_argument('--distill_output_dir', type=str, default=f'/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/multi_class/stage_2_distillation/noise_ratio_10/seed_0/ensemble_100_p10/l2')
+    parser.add_argument('--data_path', type=str, default='/path/to/datasets/MVTec-AD-noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0')
+    parser.add_argument('--output_dir', type=str, default='/path/to/experiments/inpformer/mvtec/stage_3_data_selection/distilled/noise_ratio_10/seed_0/z3/ensemble_100_p10/l2')
+    parser.add_argument('--distill_output_dir', type=str, default='/path/to/experiments/inpformer/mvtec/stage_2_distillation/noise_ratio_10/seed_0/ensemble_100_p10/l2')
     parser.add_argument('--distill_initialized', type=bool, default=True)
     parser.add_argument('--encoder', type=str, default='dinov2reg_vit_base_14')
     parser.add_argument('--beta_end', type=float, default=0.5, help='Use memory scores for data selection until a fraction of the total iterations is reached.')

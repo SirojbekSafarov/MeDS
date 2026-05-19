@@ -300,9 +300,8 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description='')
-    parser.add_argument('--data_path', type=str, default='/research/workspaces/sirojbek/Real-IAD')
-    # parser.add_argument('--data_path', type=str, default='/home/aiv/D/_datasets/Real-IAD')
-    parser.add_argument('--save_dir', type=str, default='/research/experiments/siroj/academic/noisy_ad/dinomaly/real_iad/dino_v2_vit_base_backbone/memory_scores_folder/fuad_0')
+    parser.add_argument('--data_path', type=str, default='/path/to/datasets/Real-IAD')
+    parser.add_argument('--save_dir', type=str, default='/path/to/experiments/dinomaly/real_iad/memory_scores/fuad_0')
     parser.add_argument('--save_name', type=str,
                         default='real_aid_memory_ensemble_save_fuad_0.0')
     args = parser.parse_args()

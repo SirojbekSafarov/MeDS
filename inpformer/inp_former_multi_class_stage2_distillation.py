@@ -345,7 +345,7 @@ if __name__ == '__main__':
 
     # dataset info
     parser.add_argument('--dataset', type=str, default=r'MVTec-AD') # 'MVTec-AD' or 'VisA' or 'Real-IAD'
-    parser.add_argument('--data_path', type=str, default=r'/research/workspaces/sirojbek/mvtec_noisy/mvtec_noise_ratio40/MVTech_nr40_seed_0') # Replace it with your path.
+    parser.add_argument('--data_path', type=str, default=r'/path/to/datasets/MVTec-AD-noisy/mvtec_noise_ratio40/MVTech_nr40_seed_0') # Replace it with your path.
     parser.add_argument('--score_dir', type=str,
                         default=f'memory_anomaly_maps_ensemble_{100}_p{10}')
     # save info

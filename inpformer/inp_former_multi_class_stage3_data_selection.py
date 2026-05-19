@@ -431,7 +431,6 @@ def main(args):
                              fuse_layer_decoder=fuse_layer_decoder, prototype_token=INP)
 
     model_state_dict = torch.load(args.distilled_model_path, map_location='cpu')
-    # model_state_dict = torch.load('/research/data/model_artifacts/Sirojbek/INP-Former/saved_noisy_results/mvtec_noisy/Distillation/ratio_10/seed_0/INP-Former-Multi-Class_dataset=MVTec-AD_Encoder=dinov2reg_vit_base_14_Resize=448_Crop=392_INP_num=6/model.pth', map_location='cpu')
     distilled_model.load_state_dict(model_state_dict)
     distilled_model = distilled_model.to(device)
     distilled_model.eval()
@@ -568,7 +567,7 @@ if __name__ == '__main__':
 
     # dataset info
     parser.add_argument('--dataset', type=str, default=r'MVTec-AD') # 'MVTec-AD' or 'VisA' or 'Real-IAD'
-    parser.add_argument('--data_path', type=str, default=r'/research/workspaces/sirojbek/mvtec_noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0') # Replace it with your path.
+    parser.add_argument('--data_path', type=str, default=r'/path/to/datasets/MVTec-AD-noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0') # Replace it with your path.
     parser.add_argument('--distilled_model_path', type=str, default=f'./saved_noisy_results/mvtec_noisy/Distillation/40_epoch/ratio_10/seed_0/INP-Former-Multi-Class_dataset=MVTec-AD_Encoder=dinov2reg_vit_base_14_Resize=448_Crop=392_INP_num=6/model.pth') # Replace it with your path.
 
     # save info

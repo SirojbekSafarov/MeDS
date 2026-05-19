@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set Python file name
-PYTHON_FILE="noisy_dinomaly_uni_step_3_data_selection_with_memory_score.py"  # 🔁 Replace with the actual filename
+PYTHON_FILE="step_3_data_selection_with_memory_score.py"
 
 # Array of noise ratios and seeds
 noise_ratios=(0)
@@ -19,11 +19,11 @@ for ensemble in "${ensemble_size[@]}"; do
                     scaled=$(awk "BEGIN {printf \"%.0f\", $subsampling * 100}")               
                     echo "Running for noise ratio: $ratio, seed: $seed, ensemble: $ensemble, subsampling: $scaled"
 
-                    DATA_PATH="/research/workspaces/sirojbek/mvtec_noisy/mvtec_noise_ratio${ratio}/MVTech_nr${ratio}_seed_${seed}"
-                    SAVE_DIR="/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/multi_class/stage_3_pseudo_label_selection/memory_as_dataselector/noise_ratio_${ratio}/seed_${seed}/z${mad_factor}/ensemble_${ensemble}_p${scaled}/${loss_function}"
-                    MEMORY_OUT_DIR="/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/memory_scores_folder/noise_ratio_${ratio}/seed_${seed}/ensemble_${ensemble}_p${scaled}"
+                    DATA_PATH="/path/to/datasets/MVTec-AD-noisy/mvtec_noise_ratio${ratio}/MVTech_nr${ratio}_seed_${seed}"
+                    SAVE_DIR="/path/to/experiments/dinomaly/mvtec/stage_3_data_selection/memory_score/noise_ratio_${ratio}/seed_${seed}/z${mad_factor}/ensemble_${ensemble}_p${scaled}/${loss_function}"
+                    MEMORY_OUT_DIR="/path/to/experiments/dinomaly/mvtec/memory_scores/noise_ratio_${ratio}/seed_${seed}/ensemble_${ensemble}_p${scaled}"
 
-                    CUDA_VISIBLE_DEVICES=7 python $PYTHON_FILE \
+                    CUDA_VISIBLE_DEVICES=0 python $PYTHON_FILE \
                     --data_path "$DATA_PATH" \
                     --output_dir "$SAVE_DIR" \
                     --memory_output_dir "$MEMORY_OUT_DIR" \

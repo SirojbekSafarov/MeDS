@@ -358,9 +358,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='')
 
     parser.add_argument('--dataset', type=str, default=r'MVTec-AD') # 'MVTec-AD' or 'VisA'
-    parser.add_argument('--data_path', type=str, default='/research/workspaces/sirojbek/mvtec_noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0')
-    parser.add_argument('--output_dir', type=str, default=f'/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/multi_class/stage_2_distillation/noise_ratio_10/seed_0/ensemble_100_p10/l2')
-    parser.add_argument('--memory_output_dir', type=str, default=f'/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/memory_scores_folder/noise_ratio_10/seed_0/ensemble_100_p10')
+    parser.add_argument('--data_path', type=str, default='/path/to/datasets/MVTec-AD-noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0')
+    parser.add_argument('--output_dir', type=str, default='/path/to/experiments/dinomaly/mvtec/stage_2_distillation/noise_ratio_10/seed_0/ensemble_100_p10/l2')
+    parser.add_argument('--memory_output_dir', type=str, default='/path/to/experiments/dinomaly/mvtec/memory_scores/noise_ratio_10/seed_0/ensemble_100_p10')
     parser.add_argument('--loss_function', type=str, default=f'l2', help='loss can be l1 or l2')
     parser.add_argument('--encoder', type=str, default='dinov2reg_vit_base_14')
     parser.add_argument('--n_iters', type=int, default=10000)

@@ -566,9 +566,9 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('--dataset', type=str, default=r'MVTec-AD') # 'MVTec-AD' or 'VisA'
-    parser.add_argument('--data_path', type=str, default='/research/workspaces/sirojbek/mvtec_noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0')
-    parser.add_argument('--output_dir', type=str, default=f'/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/multi_class/stage_3_pseudo_label_selection/distilled_model_as_dataselector/with_distilled_as_seed_model/noise_ratio_10/seed_0/z3/ensemble_100_p10/l2')
-    parser.add_argument('--distill_output_dir', type=str, default=f'/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/multi_class/stage_2_distillation/noise_ratio_10/seed_0/ensemble_100_p10/l2')
+    parser.add_argument('--data_path', type=str, default='/path/to/datasets/MVTec-AD-noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0')
+    parser.add_argument('--output_dir', type=str, default='/path/to/experiments/dinomaly/mvtec/stage_3_data_selection/distilled/noise_ratio_10/seed_0/z3/ensemble_100_p10/l2')
+    parser.add_argument('--distill_output_dir', type=str, default='/path/to/experiments/dinomaly/mvtec/stage_2_distillation/noise_ratio_10/seed_0/ensemble_100_p10/l2')
     parser.add_argument('--distill_initialized', type=bool, default=True)
     parser.add_argument('--encoder', type=str, default='dinov2reg_vit_base_14')
     parser.add_argument('--beta_end', type=float, default=0.5, help='Use memory scores for data selection until a fraction of the total iterations is reached.')

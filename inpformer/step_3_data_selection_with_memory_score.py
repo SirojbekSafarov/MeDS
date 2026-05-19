@@ -587,9 +587,9 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('--dataset', type=str, default=r'MVTec-AD') # 'MVTec-AD' or 'VisA'
-    parser.add_argument('--data_path', type=str, default='/research/workspaces/sirojbek/mvtec_noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0')
-    parser.add_argument('--output_dir', type=str, default=f'/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/multi_class/stage_3_pseudo_label_selection/memory_as_dataselector/noise_ratio_10/seed_0/z3/ensemble_100_p10/l2')
-    parser.add_argument('--memory_output_dir', type=str, default=f'/research/experiments/siroj/academic/noisy_ad/dinomaly/mvtec/dino_v2_vit_base_backbone/memory_scores_folder/noise_ratio_10/seed_0/ensemble_100_p10')
+    parser.add_argument('--data_path', type=str, default='/path/to/datasets/MVTec-AD-noisy/mvtec_noise_ratio10/MVTech_nr10_seed_0')
+    parser.add_argument('--output_dir', type=str, default='/path/to/experiments/inpformer/mvtec/stage_3_data_selection/memory_score/noise_ratio_10/seed_0/z3/ensemble_100_p10/l2')
+    parser.add_argument('--memory_output_dir', type=str, default='/path/to/experiments/inpformer/mvtec/memory_scores/noise_ratio_10/seed_0/ensemble_100_p10')
     parser.add_argument('--encoder', type=str, default='dinov2reg_vit_base_14')
     parser.add_argument('--beta_end', type=float, default=0.5, help='Use memory scores for data selection until a fraction of the total iterations is reached.')
     parser.add_argument('--mad_factor', type=int, default=3, help='MAD factor to make thr for data selection. Values can be 0,1,2,3')

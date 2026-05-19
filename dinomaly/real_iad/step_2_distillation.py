@@ -333,8 +333,8 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description='')
-    parser.add_argument('--data_path', type=str, default='/research/workspaces/sirojbek/Real-IAD')
-    parser.add_argument('--save_dir', type=str, default='/research/experiments/siroj/academic/noisy_ad/dinomaly/real_iad/dino_v2_vit_base_backbone/multi_class/stage_2_distillation/')
+    parser.add_argument('--data_path', type=str, default='/path/to/datasets/Real-IAD')
+    parser.add_argument('--save_dir', type=str, default='/path/to/experiments/dinomaly/real_iad/stage_2_distillation/')
     parser.add_argument('--save_name', type=str, default='fuiad_0.4')
     args = parser.parse_args()
     item_list = ['audiojack', 'bottle_cap', 'button_battery', 'end_cap', 'eraser', 'fire_hood',
