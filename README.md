@@ -208,18 +208,3 @@ See the per-model READMEs for argument-level documentation:
 - [inpformer/README.md](inpformer/README.md)
 
 ---
-
-## Citation
-
-```bibtex
-@inproceedings{anonymous2026meds,
-  title     = {Memory-Distilled Selection for Noise-Robust Anomaly Detection},
-  author    = {Anonymous},
-  booktitle = {Proceedings of the 43rd International Conference on Machine Learning (under review)},
-  year      = {2026}
-}
-```
-
-## License
-
-MIT — see [LICENSE](LICENSE).
