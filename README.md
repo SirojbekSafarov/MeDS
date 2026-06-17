@@ -1,6 +1,6 @@
 # Memory-Distilled Selection (MeDS)
 
-Official implementation of the ICML 2026 paper **"Memory-Distilled Selection for Noise-Robust Anomaly Detection"**.
+Official implementation of the ICML 2026 paper **"Memory-Distilled Selection for Noise-Robust Anomaly Detection"**. [(arxiv)](https://arxiv.org/abs/2605.26676).
 
 MeDS is a training framework that makes unsupervised anomaly detection robust to **contaminated training data** — i.e. training sets that contain an unknown fraction of anomalous samples. It is not a single model; it is a three-stage *training algorithm* that can be applied on top of existing AD baselines.
 
