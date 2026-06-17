@@ -36,7 +36,7 @@ from functools import partial
 from ptflops import get_model_complexity_info
 from optimizers import StableAdamW
 import warnings
-import copy
+
 import logging
 from sklearn.metrics import roc_auc_score, average_precision_score
 import itertools
